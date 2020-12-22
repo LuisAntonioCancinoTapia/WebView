@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Calculadora</title>
+    <script type="text/javaScript">
+        function add(){
+        var x,y,z;
+        x=parseInt(document.myform.n1.value);
+        y=parseInt(document.myform.n2.value);
+        z=x+y;
+        document.myform.result.value=z;
+        }
+        function sub(){
+        var x,y,z;
+        x=parseInt(document.myform.n1.value);
+        y=parseInt(document.myform.n2.value);
+        z=x-y;
+        document.myform.result.value=z;
+        }
+        function mul(){
+        var x,y,z;
+        x=parseInt(document.myform.n1.value);
+        y=parseInt(document.myform.n2.value);
+        z=x*y;
+        document.myform.result.value=z;
+        }
+        function div(){
+        var x,y,z;
+        x=parseInt(document.myform.n1.value);
+        y=parseInt(document.myform.n2.value);
+        z=x/y;
+        document.myform.result.value=z;
+        }
+    </script>
+</head>
+<body>
+<h1 align="center">Calculadora</h1>
+<hr color="blue">
+<center>
+<form name="myform">
+    <br>Numero 1:<input type="text" name="n1" value="" placeholder="Ingresa el numero 1"/><br><br>
+    Numero 2:<input type="text" name="n2" value="" placeholder="Ingresa el numero 2"/><br><br>
+
+    Suma: <input type="button" value="Suma" onClick="add();showAndroidToast('Hello Android!');"/>
+    <script type="text/javascript">
+    function showAndroidToast(snackbar){
+        Android.showSnackbarAdd(snackbar);
+    }
+    </script>
+    <br><br>
+    Resta: <input type="button" value="Resta" onclick="sub();showAndroidToast1('Hello Android!');"/>
+    <script type="text/javascript">
+    function showAndroidToast1(snackbar) {
+        Android.showSnackbarSub(snackbar);
+    }
+    </script>
+    <br><br>
+    Multiplicacion: <input type="button" value="Multiplicacion" onclick="mul();showAndroidToast2('Hello Android!');"/>
+    <script type="text/javascript">
+    function showAndroidToast2(snackbar) {
+        Android.showSnackbarMul(snackbar);
+    }
+    </script>
+    <br><br>
+    Division: <input type="button" value="Division" onclick="div();showAndroidToast3('Hello Android!');"/>
+    <script type="text/javascript">
+    function showAndroidToast3(snackbar) {
+        Android.showSnackbarDiv(snackbar);
+    }
+    </script>
+    <br><br>
+    Vaciar campos: <input type="reset" value="Vaciar campos" onclick="showAndroidToast4('Hello Android!');"/>
+    <script type="text/javascript">
+    function showAndroidToast4(snackbar) {
+        Android.showSnackbarReset(snackbar);
+    }
+    </script>
+    <br><br>
+
+    La respuesta es: <input type="text" name="result" value="" placeholder="Respuesta"/>
+
+</form>
+</center>
+</body>
+</html>
